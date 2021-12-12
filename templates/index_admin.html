@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>39 주문서 관리</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_1.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+    <div class="section--top">
+        <button class="port--btn" type="submit">
+            <img src="{{ url_for('static', filename='img/39logo.png') }}">
+        </button>
+    </div>
+
+    <div class="section--middle">
+        <div class="txtBox-wrap--1">
+            <div class="txtBox box--1">
+                <span>ORDER</span>
+            </div>
+            <div class="txtBox box--2">
+                <span>오더 메이드 상품 주문서입니다.</span>
+            </div>
+            <div class="txtBox box--3">
+                <span>제품명:</span>&nbsp;&nbsp;&nbsp;<!--<input class="underline" id="product" type="text" value="">-->
+            </div>
+        </div>
+    </div>
+
+    <div class="section--middle2">
+        <div class="txtBox-wrap--2">
+            <div class="txtBox2 box--4">
+                <span>성명</span>&nbsp;&nbsp;&nbsp;<!--<input class="underline" id="name" type="text" value="">--!>
+            </div>
+            <div class="txtBox2 box--5">
+                <span>연락처</span>&nbsp;&nbsp;&nbsp;<!--<input class="underline" id="ph" type="text" value="">--!>
+            </div>
+        </div>
+        <div class="txtBox-wrap--3">
+            <div class="txtBox3 box--6">
+                <span>주소</span>&nbsp;&nbsp;&nbsp;<!--<input class="underline" id="address" type="text" value="" size="51">--!>
+            </div>
+            <div class="txtBox3 box--7">
+                <span>비고</span>&nbsp;&nbsp;&nbsp;<!--<input class="underline" id="etc" type="text" value="" size="51">--!>
+            </div>
+        </div>
+    </div>
+
+    <div class="section--bottom">
+        <div class="txtBox-wrap--4">
+            <div class="txtBox4 box--8">
+                <span>구매하신 제품은 주문일 기준 <input class="underline" id="day" type="text" value="" size="5">일 소요될 예정이며, 예상 배송일은 <input
+                        class="underline" id="day2" type="text" value=""
+                        size="10">입니다. 출고 후 남겨주신 연락처로 송장번호를 보내드립니다.</span>
+            </div>
+            <div class="txtBox4 box--9">
+                <span>궁금하신 점이 있으시면 <span style="font-weight:bold">info@39etc.com</span> 또는 <span
+                        style="font-weight:bold">070-4056-0039</span> (이촌 쇼룸 / 수요일 휴무 / 오후 1시-오후 6시), 인스타그램 <span
+                        style="font-weight:bold">@39etc</span>로 다이렉트 메세지 부탁드립니다.</span>
+            </div>
+            <div class="txtBox4 box--10">
+                <span>주문 제작 상품의 경우 교환 및 환불이 어렵습니다.</span>
+            </div>
+            <div class="txtBox4 box--11">
+                <span>인쇄에 사용되는 종이, 전력을 절약하고 분실의 위험을 막기 위해 주문서는 이메일로 발송됩니다.</span>
+            </div>
+        </div>
+
+        <div class="txtBox-wrap--6">
+            <div class="txtBox6 box--13" id="port--1">
+                <div class="txtBox6 box--13">
+                    <span class="product"></span>
+                </div>
+                <div class="txtBox6 box--14">
+                    <span class="name"></span>
+                </div>
+                <div class="txtBox6 box--15">
+                    <span class="ph"></span>
+                </div>
+                <div class="txtBox6 box--16">
+                    <span class="address"></span>
+                </div>
+                <div class="txtBox6 box--17">
+                    <span class="etc"></span>
+                </div>
+                <div class="txtBox6 box--18">
+                    <span class="day"></span>
+                </div>
+                <div class="txtBox6 box--19">
+                    <span class="day2"></span>
+                </div>
+                <div class="txtBox6 box--20">
+                    <span class="date"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#day').on('change keyup', function () {
+            var numChange6 = $(this).val();
+            $('.day').text(numChange6);
+        });
+
+        $('#day2').on('change keyup', function () {
+            var numChange7 = $(this).val();
+            $('.day2').text(numChange7);
+        });
+
+
+        $(".port--btn").on('click', function () {
+            var port1 = $("#port--1").text();
+            var checkInput1 = $('.box--8').find('input').val();
+            if (checkInput1 == "") {
+                alert('제작 기간과 예상 배송일을 입력하세요.');
+            } else {
+                console.log(port1);
+            }
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
