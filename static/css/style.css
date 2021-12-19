@@ -443,7 +443,7 @@ svg {
     top: 34%;
 }
 
-.text {
+.text--1 {
     padding: 0 25%;
 }
 
@@ -453,12 +453,12 @@ svg {
 
 .moon-wrap {
     position: absolute;
-    top: 67%;
+    top: 69%;
 }
 
 .moon-inner {
     display: flex;
-    padding: 0 0 0 30%;
+    padding: 0 0 0 28%;
 }
 
 .moon-item--1 {
@@ -466,6 +466,51 @@ svg {
 }
 
 .moon-item--1 > img {
-    padding: 0 0 0 6%;
     margin-left: 80%;
+}
+
+.cat-tail {
+    position: absolute;
+    top: -22%;
+    left: 63%;
+}
+
+.cat {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+}
+
+.text--2 {
+    position: absolute;
+    top: 38%;
+}
+
+.size-inner {
+    position: absolute;
+    display: flex;
+    top: 54%;
+}
+
+.goods-inner {
+    position: absolute;
+    display: flex;
+    top: 35%;
+}
+
+.submit-inner {
+    position: absolute;
+    top: 9%;
+    padding: 0 15%;
+}
+
+.firework-item--1 {
+    position: absolute;
+    top: 43%;
+}
+
+.firework-item--2 {
+    position: absolute;
+    top: 31%;
+    left: 67%;
 }
