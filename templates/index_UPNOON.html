@@ -93,26 +93,29 @@
             <div class="size-wrap">
                 <div class="size-inner">
                     <button class="size-item--1">
-                        <img src="{{ url_for('static', filename='img/size-3.png') }}">
+                        <img class="off1" src="{{ url_for('static', filename='img/size-3.png') }}">
+                        <img class="on1" src="{{ url_for('static', filename='img/size-3-on.png') }}">
                     </button>
                     <button class="size-item--2">
-                        <img src="{{ url_for('static', filename='img/size-2.png') }}">
+                        <img class="off2" src="{{ url_for('static', filename='img/size-2.png') }}">
+                        <img class="on2" src="{{ url_for('static', filename='img/size-2-on.png') }}">
                     </button>
                     <button class="size-item--3">
-                        <img src="{{ url_for('static', filename='img/size-1.png') }}">
+                        <img class="off3" src="{{ url_for('static', filename='img/size-1.png') }}">
+                        <img class="on3" src="{{ url_for('static', filename='img/size-1-on.png') }}">
                     </button>
                 </div>
-                <div class="size-inner-on">
-                    <button class="size-item-on--1">
-                        <img src="{{ url_for('static', filename='img/size-3-on.png') }}">
-                    </button>
-                    <button class="size-item-on--2">
-                        <img src="{{ url_for('static', filename='img/size-2-on.png') }}">
-                    </button>
-                    <button class="size-item-on--3">
-                        <img src="{{ url_for('static', filename='img/size-1-on.png') }}">
-                    </button>
-                </div>
+{#                <div class="size-inner-on">#}
+{#                    <button class="size-item on1">#}
+{#                        <img src="{{ url_for('static', filename='img/size-3-on.png') }}">#}
+{#                    </button>#}
+{#                    <button class="size-item on2">#}
+{#                        <img src="{{ url_for('static', filename='img/size-2-on.png') }}">#}
+{#                    </button>#}
+{#                    <button class="size-item on3">#}
+{#                        <img src="{{ url_for('static', filename='img/size-1-on.png') }}">#}
+{#                    </button>#}
+{#                </div>#}
             </div>
         </div>
     </section>
@@ -128,10 +131,12 @@
             <div class="goods-wrap">
                 <div class="goods-inner">
                     <button class="goods-item--1">
-                        <img src="{{ url_for('static', filename='img/goods-2.png') }}">
+                        <img class="goods-off1" src="{{ url_for('static', filename='img/goods-2.png') }}">
+                        <img class="goods-on1" src="{{ url_for('static', filename='img/goods-2-on.png') }}">
                     </button>
                     <button class="goods-item--2">
-                        <img src="{{ url_for('static', filename='img/goods-1.png') }}">
+                        <img class="goods-off2" src="{{ url_for('static', filename='img/goods-1.png') }}">
+                        <img class="goods-on2" src="{{ url_for('static', filename='img/goods-1-on.png') }}">
                     </button>
                 </div>
             </div>
@@ -169,10 +174,10 @@
             <div class="firework-wrap">
                 <div class="firework-inner">
                     <div class="firework-item--1">
-                        <img src="{{ url_for('static', filename='img/firework.png') }}">
+                        <img class="moving-firework--1" src="{{ url_for('static', filename='img/firework.png') }}">
                     </div>
                     <div class="firework-item--2">
-                        <img src="{{ url_for('static', filename='img/firework.png') }}">
+                        <img class="moving-firework--2" src="{{ url_for('static', filename='img/firework.png') }}">
                     </div>
                 </div>
             </div>
@@ -185,17 +190,69 @@
 
 <script>
     $(document).ready(function () {
-        $('.size-inner').show();
-        $('.size-inner-on').hide();
+        $('.off1').show();
+        $('.on1').hide();
 
-        $('.size-inner').click(function () {
-            $('.size-inner').hide();
-            $('.size-inner-on').show();
+        $('.off1').click(function () {
+            $('.off1').hide();
+            $('.on1').show();
         });
 
-        $('.size-inner-on').click(function () {
-            $('.size-inner').show();
-            $('.size-inner-on').hide();
+        $('.on1').click(function () {
+            $('.off1').show();
+            $('.on1').hide();
+        });
+
+        $('.off2').show();
+        $('.on2').hide();
+
+        $('.off2').click(function () {
+            $('.off2').hide();
+            $('.on2').show();
+        });
+
+        $('.on2').click(function () {
+            $('.off2').show();
+            $('.on2').hide();
+        });
+
+        $('.off3').show();
+        $('.on3').hide();
+
+        $('.off3').click(function () {
+            $('.off3').hide();
+            $('.on3').show();
+        });
+
+        $('.on3').click(function () {
+            $('.off3').show();
+            $('.on3').hide();
+        });
+
+        $('.goods-off1').show();
+        $('.goods-on1').hide();
+
+        $('.goods-off1').click(function () {
+            $('.goods-off1').hide();
+            $('.goods-on1').show();
+        });
+
+        $('.goods-on1').click(function () {
+            $('.goods-off1').show();
+            $('.goods-on1').hide();
+        });
+
+        $('.goods-off2').show();
+        $('.goods-on2').hide();
+
+        $('.goods-off2').click(function () {
+            $('.goods-off2').hide();
+            $('.goods-on2').show();
+        });
+
+        $('.goods-on2').click(function () {
+            $('.goods-off2').show();
+            $('.goods-on2').hide();
         });
     });
 </script>

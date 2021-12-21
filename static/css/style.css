@@ -532,10 +532,14 @@ svg {
     }
 }
 
-.size-inner, .size-inner-on {
+.size-inner {
     position: absolute;
     display: flex;
     top: 54%;
+}
+
+.size-item {
+    position: relative;
 }
 
 .goods-inner {
@@ -559,4 +563,38 @@ svg {
     position: absolute;
     top: 31%;
     left: 67%;
+}
+
+.moving-firework--1 {
+    position: relative;
+    animation: firework-1 700ms ease-out infinite alternate;
+}
+
+@keyframes firework-1 {
+    0% {
+        left: 0px;
+        top: 20px;
+    }
+
+    100% {
+        left: 0px;
+        top: -30px;
+    }
+}
+
+.moving-firework--2 {
+    position: relative;
+    animation: firework-2 1000ms ease-out infinite alternate;
+}
+
+@keyframes firework-2 {
+    0% {
+        left: 0px;
+        top: 40px;
+    }
+
+    100% {
+        left: 0px;
+        top: -10px;
+    }
 }
