@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
 </head>
 
 <body>
@@ -47,7 +48,7 @@
             <div class="moon-wrap">
                 <div class="moon-inner">
                     <div class="moon-item--1">
-                        <img src="{{ url_for('static', filename='img/moon-1.png') }}">
+                        <img class="moving-moon" src="{{ url_for('static', filename='img/moon-1.png') }}">
                     </div>
                     <div class="moon-item--2">
                         <img src="{{ url_for('static', filename='img/moon-2.png') }}">
@@ -65,7 +66,7 @@
             <div class="cat-wrap">
                 <div class="cat-inner">
                     <div class="cat-tail">
-                        <img src="{{ url_for('static', filename='img/cat-tail.png') }}">
+                        <img class="moving-tail" src="{{ url_for('static', filename='img/cat-tail.png') }}">
                     </div>
                     <div class="cat">
                         <img src="{{ url_for('static', filename='img/cat.png') }}">
@@ -73,7 +74,7 @@
                 </div>
             </div>
             <div class="text--2">
-                <img src="{{ url_for('static', filename='img/NEED_IT_KNIT_IT.png') }}">
+                <img class="moving-text" src="{{ url_for('static', filename='img/NEED_IT_KNIT_IT.png') }}">
             </div>
         </div>
     </section>
@@ -99,6 +100,17 @@
                     </button>
                     <button class="size-item--3">
                         <img src="{{ url_for('static', filename='img/size-1.png') }}">
+                    </button>
+                </div>
+                <div class="size-inner-on">
+                    <button class="size-item-on--1">
+                        <img src="{{ url_for('static', filename='img/size-3-on.png') }}">
+                    </button>
+                    <button class="size-item-on--2">
+                        <img src="{{ url_for('static', filename='img/size-2-on.png') }}">
+                    </button>
+                    <button class="size-item-on--3">
+                        <img src="{{ url_for('static', filename='img/size-1-on.png') }}">
                     </button>
                 </div>
             </div>
@@ -170,4 +182,22 @@
 </div>
 
 </body>
+
+<script>
+    $(document).ready(function () {
+        $('.size-inner').show();
+        $('.size-inner-on').hide();
+
+        $('.size-inner').click(function () {
+            $('.size-inner').hide();
+            $('.size-inner-on').show();
+        });
+
+        $('.size-inner-on').click(function () {
+            $('.size-inner').show();
+            $('.size-inner-on').hide();
+        });
+    });
+</script>
+
 </html>
